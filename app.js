@@ -1,11 +1,18 @@
 const express = require('express');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
 
 // Create express instnace
 const app = express();
 
-// Require API routes
-app.listen(3000);
+// Connect to MongoDB
+const dbURI = "mongodb+srv://rpeglow:DiqZI7e47KKCQql2@node-tut.xgff5ig.mongodb.net/"
+mongoose.connect(dbURI)
+    .then((result) => app.listen(3000))
+    .catch((err) => console.log(err));
+
+
+
 
 // registar view engine
 app.set('view engine', 'ejs');
