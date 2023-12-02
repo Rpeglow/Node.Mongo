@@ -16,6 +16,6 @@ const blogSchema = new Schema({
         },
     }, {timestamps: true});
 
-    // Model name is singular and will be pluralized by mongoose ex: Blog -> blogs
+    // Model name is singular and will be pluralized by mongoose ex: Blog -> Blogs
 const Blog = mongoose.model('Blog', blogSchema);
 module.exports = Blog;
